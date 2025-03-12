@@ -6,6 +6,7 @@
         {
             FindMostFrequentNumber(new int[] { 1, 3, 2, 3, 4, 1, 3, 2, 2, 2, 5 }); // 2
             FindMostFrequentNumber(new int[] { 7, 7, 5, 5, 1, 1, 1, 2, 2, 2 }); // 1
+            FindMostFrequentNumber(new int[] { 7, 7, 5, 5, 1, 1, 1, 2, 2, 2, -1, -1, -1, -1, -1, -4, -4, -4, -4, -4, -5 }); // -4
         }
 
         private static void FindMostFrequentNumber(int[] numbers)

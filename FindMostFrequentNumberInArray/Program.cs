@@ -9,14 +9,13 @@
         }
 
         private static void FindMostFrequentNumber(int[] numbers)
-        {
-            
+        {            
             // Create a disct with LINQ to count frequency of numbers.
             Dictionary<int, int> numberCount = numbers.GroupBy(n => n)
                                      .ToDictionary(g => g.Key, g => g.Count());
 
             // Find the most frequest number
-            var mostFrequent = numberCount.OrderByDescending(kvp => kvp.Value) // Descending to get the largest numbers first
+            var mostFrequent = numberCount.OrderByDescending(kvp => kvp.Value) // Descending to get the most frequest numbers first
                                           .ThenBy(kvp => kvp.Key) // If there are multiple numbers that appears the same number of times, choose the smallest.
                                           .First();
 

@@ -11,7 +11,7 @@
 
         private static void FindMostFrequentNumber(int[] numbers)
         {            
-            // Create a disct with LINQ to count frequency of numbers.
+            // Create a dict with LINQ to count frequency of numbers.
             Dictionary<int, int> numberCount = numbers.GroupBy(n => n)
                                      .ToDictionary(g => g.Key, g => g.Count());
 
